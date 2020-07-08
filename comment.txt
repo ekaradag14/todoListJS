@@ -1,0 +1,15 @@
+<!-- html içinde javascript yazmak için her js satırının başına ve sonuna bu
+taglerden gelmesi gerekiyor. ancak bu kontrol flow için geçerli yani ejs
+dosyalarına bakarsan sadece if, while, switch gibi tagler için kullanılabileceğini
+görebilirsin. Bunun nedeni logic'in aslında serverda durması gerektiği-->
+
+<!-- Burada eskiden browser dan aldığım günü gösteriyordum o yüzden kindOfDay diye bir şey var -->
+  <!-- Buradan < %= tagin ile app.js den aldığım datayı gömüyorum sayfaya  -->
+
+<!-- <% if (kindOfDay === "Saturday" || kindOfDay === "Sunday") { %>   -->
+<!--
+<h1 style="color:purple"> <%= kindOfDay%> ToDo List</h1>
+<% } else { %>
+<h1 style="color:blue"> <%= kindOfDay%> ToDo List</h1>
+<% }  %>
+-->

@@ -1,0 +1,36 @@
+<!-- header.ejs dosyası içindekileri yapıştırıyor buraya kısaca kalıp olarak kullanılıyor -->
+<%- include("header") -%>
+<!-- coment.txt -->
+
+<div class="box" id="heading">
+    <h1 > <%= listTitle %> List </h1>
+</div>
+
+<div class="box" >
+  <%   for (i = 0; i < newListTableItems.length ; i++) {  %>
+<form  action="/delete" method="post">
+  <div class="item">
+    <input  onChange="this.form.submit()" value="<%=newListTableItems[i]._id%>" name="checkbox" type="checkbox">
+    <p><%= newListTableItems[i].content%></p>
+
+      </div>
+    <input type="hidden" name="listName" value="<%= listTitle %>"></input>
+</form>
+
+      <!-- <div >
+        <form action="/" method="post">
+          <button class="delete" type="submit" name="button" value=<%= newListTableItems[i] %>  >x</button>
+          </form>
+      </div> -->
+    <% }  %>
+
+
+<!-- Buraya yazdım ejs ile bütn array dönerek hepsinden list item oluşturuyor. -->
+<form action="/" method="post">
+  <input type="text" name="newListItem" placeholder="New Item" autocomplete="off">
+  <!-- Burada düğmeye değişen bir değer vererek nereden geldiğini anlıyorum kullanıcının -->
+  <button type="submit" name="button" value="<%= listTitle %>"  >+</button>
+</form>
+</div>
+
+<%- include("footer") -%>
